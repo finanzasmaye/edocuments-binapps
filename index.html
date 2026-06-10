@@ -107,8 +107,11 @@
   </div>
 
   <script>
-    // Tu enlace directo de SharePoint con el parámetro de descarga activa
-    const urlExcel = "https://binappssas-my.sharepoint.com/:x:/g/personal/dlemus_binapps_co/IQCbvVdoy_tVRKa-Zl9ND03PAcEekHqeOLLBUX5_8Wq25zA?download=1";
+    // Link original de descarga de tu SharePoint
+    const urlOriginal = "https://binappssas-my.sharepoint.com/:x:/g/personal/dlemus_binapps_co/IQCbvVdoy_tVRKa-Zl9ND03PAcEekHqeOLLBUX5_8Wq25zA?download=1";
+    
+    // Le sumamos un proxy externo para romper el bloqueo CORS empresarial de Microsoft
+    const urlExcel = "https://api.allorigins.win/raw?url=" + encodeURIComponent(urlOriginal);
 
     function cargarDatos() {
       Papa.parse(urlExcel, {
@@ -128,7 +131,7 @@
             cabecera.appendChild(th);
           });
 
-          // 2. Pintar las filas con los 400+ registros
+          // 2. Pintar las filas con los registros
           for (let i = 1; i < datos.length; i++) {
             const fila = datos[i];
             const tr = document.createElement("tr");
@@ -147,8 +150,8 @@
           document.getElementById("tabla-sincronizada").style.display = "table";
         },
         error: function(error) {
-          console.error("Error al alinear el Excel:", error);
-          document.getElementById("estado-carga").textContent = "❌ Error al conectar con el Excel. Verifica los permisos de compartir en tu SharePoint.";
+          console.error("Error al sincronizar el Excel:", error);
+          document.getElementById("estado-carga").innerHTML = "❌ Error al conectar con el Excel.<br><br>Si el error persiste, significa que la seguridad de SharePoint de tu empresa bloquea accesos web externos. En ese caso, la mejor solución definitiva es usar Google Sheets.";
         }
       });
     }
