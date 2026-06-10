@@ -113,7 +113,6 @@ tbody tr:last-child td{border-bottom:none}
 .dias-warn{color:#fde68a;font-weight:700}
 .empresa-name{font-weight:600;color:var(--text)}
 .nit-val{color:var(--muted);font-size:11.5px}
-.obs-chip{display:inline-block;background:rgba(255,255,255,.06);border-radius:6px;padding:2px 7px;font-size:10px;color:var(--muted);max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 .btn-mail{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border-radius:var(--radius-sm);border:1px solid rgba(79,142,247,.3);background:rgba(79,142,247,.1);color:#93b4f5;font-size:11px;font-weight:600;cursor:pointer;transition:background .15s,border-color .15s;white-space:nowrap}
 .btn-mail:hover{background:rgba(79,142,247,.22);border-color:var(--blue)}
@@ -214,7 +213,7 @@ textarea.email-body:focus{border-color:var(--blue)}
   <div class="table-wrap">
     <div class="table-header">
       <span id="tableTitle">— clientes</span>
-      <span class="table-hint">Clic en encabezados para ordenar · El estado de gestión se guarda automáticamente</span>
+      <span class="table-hint">Clic en encabezados para ordenar · Cambia el estado de gestión directo en la tabla</span>
     </div>
     <div style="overflow-x:auto">
     <table>
@@ -227,7 +226,6 @@ textarea.email-body:focus{border-color:var(--blue)}
           <th onclick="sortBy('hastaD')">Hasta <span id="s_hastaD"></span></th>
           <th onclick="sortBy('dias')" style="text-align:right">Días rest. <span id="s_dias"></span></th>
           <th onclick="sortBy('gestion')">Estado gestión <span id="s_gestion"></span></th>
-          <th>Obs.</th>
           <th></th>
         </tr>
       </thead>
@@ -432,7 +430,7 @@ function renderTabla(){
   document.getElementById('tableTitle').textContent=`${total} cliente${total!==1?'s':''}`;
   const tb=document.getElementById('tabla');
   if(!pag.length){
-    tb.innerHTML=`<tr class="empty-row"><td colspan="9">😕 Sin resultados para los filtros seleccionados</td></tr>`;
+    tb.innerHTML=`<tr class="empty-row"><td colspan="8">😕 Sin resultados para los filtros seleccionados</td></tr>`;
     document.getElementById('pager').innerHTML='';return;
   }
 
@@ -460,7 +458,6 @@ function renderTabla(){
       <td>${fmtF(r.desdeD)}</td><td>${fmtF(r.hastaD)}</td>
       <td style="text-align:right">${diasHtml}</td>
       <td><select class="gest-select gs-${gKey}" data-idx="${dataIdx}" onchange="cambiarGestion(${dataIdx},this.value);this.className='gest-select gs-'+this.value">${optsHtml}</select></td>
-      <td>${r.obs?`<span class="obs-chip" title="${r.obs}">${r.obs}</span>`:'—'}</td>
       <td><button class="btn-mail" onclick="abrirCorreo(${DATOS.indexOf(r)})">✉ Correo</button></td>
     </tr>`;
   }).join('');
