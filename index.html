@@ -19,13 +19,10 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:14px;min-height:100vh}
-
-/* SCROLLBAR */
 ::-webkit-scrollbar{width:6px;height:6px}
 ::-webkit-scrollbar-track{background:var(--bg2)}
 ::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:4px}
 
-/* HEADER */
 .header{background:linear-gradient(135deg,#0d1b3e 0%,#0f1117 60%);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;backdrop-filter:blur(12px)}
 .header-left{display:flex;align-items:center;gap:14px}
 .logo{width:42px;height:42px;background:linear-gradient(135deg,#e53e3e,#c53030);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;color:#fff;box-shadow:0 0 18px rgba(229,62,62,.35);letter-spacing:-1px;flex-shrink:0}
@@ -33,10 +30,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .header-title p{font-size:11px;color:var(--muted);margin-top:1px}
 .header-date{font-size:11px;color:var(--muted);text-align:right;line-height:1.6}
 
-/* MAIN */
-.main{max-width:1320px;margin:0 auto;padding:1.5rem}
+.main{max-width:1400px;margin:0 auto;padding:1.5rem}
 
-/* UPLOAD ZONE */
 .upload-zone{background:var(--bg2);border:1.5px dashed rgba(79,142,247,.35);border-radius:var(--radius);padding:1.1rem 1.4rem;margin-bottom:1.2rem;display:flex;align-items:center;gap:14px;cursor:pointer;transition:border-color .2s,background .2s;position:relative}
 .upload-zone:hover,.upload-zone.drag{border-color:var(--blue);background:rgba(79,142,247,.07)}
 .upload-zone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
@@ -45,14 +40,11 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .upload-info strong{color:var(--blue);font-weight:600}
 .upload-hint{margin-left:auto;font-size:11px;color:var(--muted);white-space:nowrap}
 
-/* NOTICE */
 .notice{background:rgba(79,142,247,.09);border:1px solid rgba(79,142,247,.22);border-radius:var(--radius-sm);padding:.75rem 1rem;margin-bottom:1.2rem;font-size:12px;color:#93b4f5;display:flex;gap:8px;align-items:flex-start;line-height:1.6}
 .notice strong{color:var(--blue)}
 
-/* METRICS */
 .metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:1.4rem}
 .metric{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem;cursor:pointer;transition:transform .15s,box-shadow .15s,border-color .15s;position:relative;overflow:hidden}
-.metric::before{content:'';position:absolute;inset:0;border-radius:var(--radius);opacity:0;transition:opacity .2s}
 .metric:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.3)}
 .metric.active{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue),0 4px 20px var(--blue-glow)}
 .metric-vencido{border-top:2px solid var(--red)}.metric-vencido .metric-num{color:var(--red)}
@@ -64,7 +56,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .metric-num{font-size:34px;font-weight:800;line-height:1}
 .metric-emoji{position:absolute;right:12px;top:12px;font-size:22px;opacity:.18}
 
-/* FILTERS */
 .filters{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.2rem;margin-bottom:1.1rem;display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
 .filter-group{display:flex;flex-direction:column;gap:4px}
 .filter-group label{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
@@ -76,7 +67,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .btn-reset:hover{background:var(--bg3);color:var(--text)}
 .count-info{margin-left:auto;font-size:12px;color:var(--muted);align-self:center;font-weight:600}
 
-/* TABLE */
 .table-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
 .table-header{padding:.8rem 1.2rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
 .table-header span{font-size:13px;font-weight:600;color:var(--text)}
@@ -89,7 +79,6 @@ tbody td{padding:9px 12px;border-bottom:1px solid rgba(255,255,255,.04);vertical
 tbody tr:hover td{background:rgba(255,255,255,.03)}
 tbody tr:last-child td{border-bottom:none}
 
-/* BADGES */
 .badge{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:20px;font-size:10px;font-weight:700}
 .badge::before{content:'';width:6px;height:6px;border-radius:50%;flex-shrink:0}
 .b-vencido{background:var(--red-bg);color:#fca5a5}.b-vencido::before{background:var(--red)}
@@ -98,24 +87,43 @@ tbody tr:last-child td{border-bottom:none}
 .b-vigente{background:var(--green-bg);color:#86efac}.b-vigente::before{background:var(--green)}
 .b-sin_fecha{background:var(--gray-bg);color:#9ca3af}.b-sin_fecha::before{background:var(--gray)}
 
+/* GESTIÓN BADGES */
+.gb{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:20px;font-size:10px;font-weight:700;white-space:nowrap}
+.gb::before{content:'';width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.g-correo_enviado{background:rgba(79,142,247,.15);color:#93b4f5}.g-correo_enviado::before{background:#4f8ef7}
+.g-pendiente_pago{background:rgba(245,158,11,.15);color:#fde68a}.g-pendiente_pago::before{background:#f59e0b}
+.g-ya_pago{background:rgba(34,197,94,.15);color:#86efac}.g-ya_pago::before{background:#22c55e}
+.g-inactivo{background:rgba(107,114,128,.15);color:#9ca3af}.g-inactivo::before{background:#6b7280}
+.g-no_renueva{background:rgba(240,82,82,.13);color:#fca5a5}.g-no_renueva::before{background:#f05252}
+.g-sin_gestion{background:rgba(255,255,255,.06);color:#64748b}.g-sin_gestion::before{background:#334155}
+.g-ok{background:rgba(34,197,94,.15);color:#86efac}.g-ok::before{background:#22c55e}
+
+/* SELECT DE GESTIÓN EN TABLA */
+.gest-select{background:var(--bg3);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:3px 10px;font-size:10px;font-weight:700;color:var(--text);cursor:pointer;outline:none;height:26px;transition:border-color .2s;appearance:none;-webkit-appearance:none;min-width:130px}
+.gest-select:focus{border-color:var(--blue)}
+.gest-select.gs-correo_enviado{background:rgba(79,142,247,.15);color:#93b4f5;border-color:rgba(79,142,247,.3)}
+.gest-select.gs-pendiente_pago{background:rgba(245,158,11,.15);color:#fde68a;border-color:rgba(245,158,11,.3)}
+.gest-select.gs-ya_pago{background:rgba(34,197,94,.15);color:#86efac;border-color:rgba(34,197,94,.3)}
+.gest-select.gs-inactivo{background:rgba(107,114,128,.15);color:#9ca3af;border-color:rgba(107,114,128,.3)}
+.gest-select.gs-no_renueva{background:rgba(240,82,82,.13);color:#fca5a5;border-color:rgba(240,82,82,.3)}
+.gest-select.gs-ok{background:rgba(34,197,94,.15);color:#86efac;border-color:rgba(34,197,94,.3)}
+.gest-select.gs-sin_gestion{background:rgba(255,255,255,.06);color:#64748b;border-color:rgba(255,255,255,.1)}
+
 .dias-neg{color:#fca5a5;font-weight:700}
 .dias-warn{color:#fde68a;font-weight:700}
 .empresa-name{font-weight:600;color:var(--text)}
 .nit-val{color:var(--muted);font-size:11.5px}
 .obs-chip{display:inline-block;background:rgba(255,255,255,.06);border-radius:6px;padding:2px 7px;font-size:10px;color:var(--muted);max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
-/* MAIL BTN */
 .btn-mail{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border-radius:var(--radius-sm);border:1px solid rgba(79,142,247,.3);background:rgba(79,142,247,.1);color:#93b4f5;font-size:11px;font-weight:600;cursor:pointer;transition:background .15s,border-color .15s;white-space:nowrap}
 .btn-mail:hover{background:rgba(79,142,247,.22);border-color:var(--blue)}
 
-/* PAGER */
 .pager{padding:10px 14px;display:flex;align-items:center;gap:8px;border-top:1px solid var(--border);font-size:12px;color:var(--muted)}
 .pager button{background:var(--bg3);border:1px solid rgba(255,255,255,.1);border-radius:7px;padding:4px 12px;cursor:pointer;font-size:12px;color:var(--muted);transition:background .15s,color .15s}
 .pager button:hover:not(:disabled){background:var(--bg4);color:var(--text)}
 .pager button:disabled{opacity:.3;cursor:default}
 .pager .pnum{font-weight:700;color:var(--text)}
 
-/* MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:200;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
 .modal-overlay.open{display:flex}
 .modal{background:var(--bg2);border:1px solid rgba(255,255,255,.1);border-radius:18px;width:620px;max-width:96vw;max-height:88vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,.5)}
@@ -137,7 +145,6 @@ textarea.email-body:focus{border-color:var(--blue)}
 .copy-inline{background:none;border:none;color:var(--blue);font-size:11px;cursor:pointer;font-weight:600;white-space:nowrap;padding:0}
 .copy-inline:hover{text-decoration:underline}
 
-/* TOAST */
 .toast{position:fixed;bottom:24px;right:24px;background:var(--bg4);border:1px solid rgba(79,142,247,.3);color:var(--text);padding:10px 18px;border-radius:10px;font-size:13px;font-weight:600;z-index:999;opacity:0;transition:opacity .3s;pointer-events:none;box-shadow:0 4px 20px rgba(0,0,0,.4)}
 .toast.show{opacity:1}
 .empty-row td{text-align:center;padding:3rem;color:var(--muted);font-size:13px}
@@ -174,13 +181,26 @@ textarea.email-body:focus{border-color:var(--blue)}
 
   <div class="filters">
     <div class="filter-group">
-      <label>Filtrar por estado</label>
+      <label>Filtrar por estado certificado</label>
       <select id="filtroEstado" onchange="paginaActual=1;renderTabla()">
         <option value="">Todos los estados</option>
         <option value="vencido">🔴 Vencidos</option>
         <option value="critico">🟡 Urgentes (≤15 días)</option>
         <option value="proximo">🟠 Próximos (16–30 días)</option>
         <option value="vigente">🟢 Vigentes</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Filtrar por estado de gestión</label>
+      <select id="filtroGestion" onchange="paginaActual=1;renderTabla()">
+        <option value="">Todos</option>
+        <option value="sin_gestion">⚪ Sin gestión</option>
+        <option value="correo_enviado">📧 Correo enviado</option>
+        <option value="pendiente_pago">⏳ Pendiente de pago</option>
+        <option value="ya_pago">✅ Ya pagó / Pagado</option>
+        <option value="ok">✔ OK / Confirmado</option>
+        <option value="inactivo">🚫 Inactivo</option>
+        <option value="no_renueva">❌ No va a renovar</option>
       </select>
     </div>
     <div class="filter-group">
@@ -194,19 +214,20 @@ textarea.email-body:focus{border-color:var(--blue)}
   <div class="table-wrap">
     <div class="table-header">
       <span id="tableTitle">— clientes</span>
-      <span class="table-hint">Clic en encabezados para ordenar</span>
+      <span class="table-hint">Clic en encabezados para ordenar · El estado de gestión se guarda automáticamente</span>
     </div>
     <div style="overflow-x:auto">
     <table>
       <thead>
         <tr>
-          <th onclick="sortBy('est')">Estado <span id="s_est"></span></th>
+          <th onclick="sortBy('est')">Estado cert. <span id="s_est"></span></th>
           <th onclick="sortBy('empresa')">Empresa <span id="s_empresa"></span></th>
           <th onclick="sortBy('nit')">NIT <span id="s_nit"></span></th>
           <th onclick="sortBy('desdeD')">Desde <span id="s_desdeD"></span></th>
           <th onclick="sortBy('hastaD')">Hasta <span id="s_hastaD"></span></th>
           <th onclick="sortBy('dias')" style="text-align:right">Días rest. <span id="s_dias"></span></th>
-          <th>Observación</th>
+          <th onclick="sortBy('gestion')">Estado gestión <span id="s_gestion"></span></th>
+          <th>Obs.</th>
           <th></th>
         </tr>
       </thead>
@@ -239,26 +260,47 @@ let DATOS=[];
 document.getElementById('headerDate').innerHTML=
   HOY.toLocaleDateString('es-CO',{weekday:'long',day:'2-digit',month:'long',year:'numeric'});
 
+// Mapeo de valores de obs originales a claves de gestión
+function obsAGestion(obs){
+  if(!obs)return'sin_gestion';
+  const v=obs.toUpperCase().trim();
+  if(v==='OK'||v==='YA PAGARON'||v==='YA PAGO')return'ya_pago';
+  if(v.includes('YA ENVIE CORREO')||v.includes('YA ENVIÉ CORREO'))return'correo_enviado';
+  if(v.includes('INACTIVO')||v.includes('INACTIVA')||v.includes('INACTIVOS'))return'inactivo';
+  if(v.includes('NO VAN A RENOVAR')||v.includes('NO RENOVAR'))return'no_renueva';
+  if(v.includes('PENDIENTE'))return'pendiente_pago';
+  if(v==='ARBEY'||v==='CAMBIO RAZON SOCIAL'||v==='FALTA HABILITAR'||v==='NO CONTESTARON'||v==='YA PAGARON')return'ya_pago';
+  return'sin_gestion';
+}
+
+const GESTION_CFG={
+  sin_gestion:{label:'Sin gestión',cls:'gs-sin_gestion',emoji:'⚪',order:5},
+  correo_enviado:{label:'Correo enviado',cls:'gs-correo_enviado',emoji:'📧',order:1},
+  pendiente_pago:{label:'Pendiente pago',cls:'gs-pendiente_pago',emoji:'⏳',order:2},
+  ya_pago:{label:'Pagado',cls:'gs-ya_pago',emoji:'✅',order:0},
+  ok:{label:'OK',cls:'gs-ok',emoji:'✔',order:0},
+  inactivo:{label:'Inactivo',cls:'gs-inactivo',emoji:'🚫',order:4},
+  no_renueva:{label:'No renueva',cls:'gs-no_renueva',emoji:'❌',order:3}
+};
+
 // Drag & drop
 const uz=document.getElementById('uploadZone');
 uz.addEventListener('dragover',e=>{e.preventDefault();uz.classList.add('drag')});
 uz.addEventListener('dragleave',()=>uz.classList.remove('drag'));
-uz.addEventListener('drop',e=>{e.preventDefault();uz.classList.remove('drag');const f=e.dataTransfer.files[0];if(f) procesarArchivo(f);});
+uz.addEventListener('drop',e=>{e.preventDefault();uz.classList.remove('drag');const f=e.dataTransfer.files[0];if(f)procesarArchivo(f);});
 
-function cargarArchivo(e){const f=e.target.files[0];if(f) procesarArchivo(f);}
+function cargarArchivo(e){const f=e.target.files[0];if(f)procesarArchivo(f);}
 
 function procesarArchivo(file){
   document.getElementById('uploadInfo').innerHTML=`<strong>${file.name}</strong> · procesando…`;
   const reader=new FileReader();
   reader.onload=function(e){
     const txt=e.target.result;
-    // detectar separador
     const sep=txt.indexOf(';')>txt.indexOf(',')&&txt.indexOf(';')!==-1?';':',';
     Papa.parse(txt,{
       delimiter:sep,header:true,skipEmptyLines:true,
       complete:function(res){
         const rows=res.data;
-        // detectar columnas flexiblemente
         const keys=Object.keys(rows[0]||{});
         const findCol=(hints)=>keys.find(k=>hints.some(h=>k.toLowerCase().includes(h)))||keys[0];
         const colEmp=findCol(['empresa','razon','nombre','company']);
@@ -266,12 +308,21 @@ function procesarArchivo(file){
         const colDesde=findCol(['desde','inicio','start','from','fecha_i','vigencia_i']);
         const colHasta=findCol(['hasta','fin','end','vence','expir','vigencia_f','fecha_f']);
         const colObs=findCol(['obs','nota','comment','observ','estado']);
+        const colGest=findCol(['gestion','gestión','management','tracking']);
         DATOS=rows.map(r=>{
           const desdeD=parseFecha(r[colDesde]);
           const hastaD=parseFecha(r[colHasta]);
           const d=calcDias(hastaD);
-          return{empresa:(r[colEmp]||'').trim(),nit:(r[colNit]||'').toString().trim(),
-            desdeD,hastaD,obs:(r[colObs]||'').trim(),dias:d,est:estado(d)};
+          const obsVal=(r[colObs]||'').trim();
+          const gestVal=keys.includes(colGest)?(r[colGest]||'').trim():'';
+          return{
+            empresa:(r[colEmp]||'').trim(),
+            nit:(r[colNit]||'').toString().trim(),
+            desdeD,hastaD,
+            obs:obsVal,
+            gestion:gestVal||obsAGestion(obsVal),
+            dias:d,est:estado(d)
+          };
         }).filter(r=>r.empresa);
         document.getElementById('uploadInfo').innerHTML=`<strong>${file.name}</strong> · <span style="color:var(--green)">${DATOS.length} clientes cargados</span>`;
         paginaActual=1;renderTabla();
@@ -282,15 +333,12 @@ function procesarArchivo(file){
 }
 
 function parseFecha(s){
-  if(!s) return null;
+  if(!s)return null;
   s=s.toString().trim();
-  // dd/mm/yyyy o d/m/yyyy
   let m=s.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})$/);
   if(m){const d=new Date(+m[3],+m[2]-1,+m[1]);d.setHours(0,0,0,0);return d;}
-  // yyyy-mm-dd
   m=s.match(/^(\d{4})[\/\-](\d{1,2})[\/\-](\d{1,2})$/);
   if(m){const d=new Date(+m[1],+m[2]-1,+m[3]);d.setHours(0,0,0,0);return d;}
-  // serial Excel
   if(/^\d{4,6}$/.test(s)){const n=+s;if(n>40000&&n<60000){const d=new Date((n-25569)*86400000);d.setHours(0,0,0,0);return d;}}
   return null;
 }
@@ -328,31 +376,47 @@ function renderMetrics(){
 }
 
 function filtrarPor(e){const s=document.getElementById('filtroEstado');s.value=s.value===e?'':e;paginaActual=1;renderTabla();}
-function resetFiltros(){document.getElementById('filtroEstado').value='';document.getElementById('busqueda').value='';paginaActual=1;renderTabla();}
+function resetFiltros(){
+  document.getElementById('filtroEstado').value='';
+  document.getElementById('filtroGestion').value='';
+  document.getElementById('busqueda').value='';
+  paginaActual=1;renderTabla();
+}
 
 function sortBy(col){
   if(sortCol===col)sortDir*=-1;else{sortCol=col;sortDir=1;}
-  // update indicators
-  ['est','empresa','nit','desdeD','hastaD','dias'].forEach(c=>{
+  ['est','empresa','nit','desdeD','hastaD','dias','gestion'].forEach(c=>{
     const el=document.getElementById('s_'+c);
     if(el)el.textContent=c===sortCol?(sortDir===1?' ↑':' ↓'):'';
   });
   renderTabla();
 }
 
+function cambiarGestion(dataIdx, valor){
+  DATOS[dataIdx].gestion=valor;
+  // Actualizar color del select sin re-renderizar toda la tabla
+  const sel=document.querySelector(`select[data-idx="${dataIdx}"]`);
+  if(sel){
+    sel.className='gest-select gs-'+valor;
+  }
+  renderMetrics();
+}
+
 function renderTabla(){
   const fe=document.getElementById('filtroEstado').value;
+  const fg=document.getElementById('filtroGestion').value;
   const bq=document.getElementById('busqueda').value.toLowerCase();
   filasFiltradas=DATOS.filter(r=>{
     if(fe&&r.est!==fe)return false;
+    if(fg&&r.gestion!==fg)return false;
     if(bq&&!r.empresa.toLowerCase().includes(bq)&&!r.nit.includes(bq))return false;
     return true;
   });
-  // sort
   filasFiltradas.sort((a,b)=>{
     let va=a[sortCol],vb=b[sortCol];
     if(sortCol==='est'){va=CFG[a.est]?.order??9;vb=CFG[b.est]?.order??9;}
     if(sortCol==='dias'){va=a.dias??9999;vb=b.dias??9999;}
+    if(sortCol==='gestion'){va=GESTION_CFG[a.gestion]?.order??9;vb=GESTION_CFG[b.gestion]?.order??9;}
     if(sortCol==='desdeD'||sortCol==='hastaD'){va=va?va.getTime():0;vb=vb?vb.getTime():0;}
     if(typeof va==='string')va=va.toLowerCase();
     if(typeof vb==='string')vb=vb.toLowerCase();
@@ -368,23 +432,39 @@ function renderTabla(){
   document.getElementById('tableTitle').textContent=`${total} cliente${total!==1?'s':''}`;
   const tb=document.getElementById('tabla');
   if(!pag.length){
-    tb.innerHTML=`<tr class="empty-row"><td colspan="8">😕 Sin resultados para los filtros seleccionados</td></tr>`;
+    tb.innerHTML=`<tr class="empty-row"><td colspan="9">😕 Sin resultados para los filtros seleccionados</td></tr>`;
     document.getElementById('pager').innerHTML='';return;
   }
+
+  const GESTION_OPTS=[
+    ['sin_gestion','⚪ Sin gestión'],
+    ['correo_enviado','📧 Correo enviado'],
+    ['pendiente_pago','⏳ Pendiente de pago'],
+    ['ya_pago','✅ Pagado'],
+    ['ok','✔ OK / Confirmado'],
+    ['inactivo','🚫 Inactivo'],
+    ['no_renueva','❌ No va a renovar']
+  ];
+
   tb.innerHTML=pag.map((r,i)=>{
-    const c=CFG[r.est],idx=ini+i;
+    const c=CFG[r.est];
+    const dataIdx=DATOS.indexOf(r);
     let diasHtml='—';
     if(r.dias!==null)diasHtml=r.dias<0?`<span class="dias-neg">${r.dias}d</span>`:r.dias<=15?`<span class="dias-warn">${r.dias}d</span>`:`${r.dias}d`;
+    const gKey=GESTION_CFG[r.gestion]?r.gestion:'sin_gestion';
+    const optsHtml=GESTION_OPTS.map(([v,l])=>`<option value="${v}"${v===gKey?' selected':''}>${l}</option>`).join('');
     return`<tr>
       <td><span class="badge ${c.badge}">${c.label}</span></td>
       <td><span class="empresa-name" title="${r.empresa}">${r.empresa}</span></td>
       <td><span class="nit-val">${r.nit}</span></td>
       <td>${fmtF(r.desdeD)}</td><td>${fmtF(r.hastaD)}</td>
       <td style="text-align:right">${diasHtml}</td>
+      <td><select class="gest-select gs-${gKey}" data-idx="${dataIdx}" onchange="cambiarGestion(${dataIdx},this.value);this.className='gest-select gs-'+this.value">${optsHtml}</select></td>
       <td>${r.obs?`<span class="obs-chip" title="${r.obs}">${r.obs}</span>`:'—'}</td>
-      <td><button class="btn-mail" onclick="abrirCorreo(${idx})">✉ Correo</button></td>
+      <td><button class="btn-mail" onclick="abrirCorreo(${DATOS.indexOf(r)})">✉ Correo</button></td>
     </tr>`;
   }).join('');
+
   let pg='';
   if(totalPag>1){
     pg+=`<button onclick="irPag(${paginaActual-1})" ${paginaActual===1?'disabled':''}>← Anterior</button>`;
@@ -398,7 +478,7 @@ function renderTabla(){
 function irPag(p){paginaActual=p;renderTabla();window.scrollTo(0,120);}
 
 function abrirCorreo(idx){
-  const r=filasFiltradas[idx];
+  const r=DATOS[idx];
   const c=CFG[r.est],hastaStr=fmtF(r.hastaD);
   let sit='';
   if(r.est==='vencido')sit=`Su certificado venció hace ${Math.abs(r.dias)} días (${hastaStr}). Es necesario renovarlo de inmediato para continuar operando con facturación electrónica.`;
@@ -417,19 +497,31 @@ function abrirCorreo(idx){
     <div class="field-label">Cuerpo del mensaje</div>
     <textarea class="email-body" id="mCuerpo">${cuerpo}</textarea>`;
   document.getElementById('modalActions').innerHTML=`
-    <button class="btn-gmail" onclick="window.open('${gmailUrl}','_blank')">📧 Abrir en Gmail</button>
+    <button class="btn-gmail" onclick="window.open('${gmailUrl}','_blank');marcarCorreoEnviado(${idx})">📧 Abrir en Gmail</button>
     <button class="btn-copy2" onclick="copiarTA('mCuerpo')">📋 Copiar cuerpo</button>`;
   document.getElementById('modalOverlay').classList.add('open');
 }
+
+function marcarCorreoEnviado(idx){
+  if(DATOS[idx].gestion==='sin_gestion'){
+    DATOS[idx].gestion='correo_enviado';
+    renderTabla();
+  }
+}
+
 function copiarTexto(id){navigator.clipboard.writeText(document.getElementById(id).innerText);mostrarToast();}
 function copiarTA(id){navigator.clipboard.writeText(document.getElementById(id).value);mostrarToast();}
 function mostrarToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);}
 function cerrarModal(e){if(e.target===document.getElementById('modalOverlay'))document.getElementById('modalOverlay').classList.remove('open');}
 
-// Cargar datos iniciales precargados
+// Datos precargados
 (function(){
 const RAW=[["APLICACIONES DE NEGOCIOS INTELIGENTES BINAPPS S.A.S","900619134","18/11/2025","18/11/2026",""],["IMAGINA LA WEB S.A.S","901198631","15/05/2025","15/05/2026","OK"],["PAOLA ANDREA VALENCIA MARQUEZ","24337411","26/07/2022","26/07/2023",""],["COMERCIALIZADORA MEGABOLSOS","901227033","30/06/2021","30/06/2022",""],["MURIEL HERNANDEZ HECTOR FABIO","93383255","9/07/2025","9/07/2026",""],["VETERINARIA EL RANCHO DE LES SAS","900477830","4/08/2021","4/08/2022",""],["PROMAPAN TULUA S.A.S.","901427740","2/09/2025","2/09/2026",""],["DISMAR VILLEGAS S.A.S","901304281","18/08/2022","18/08/2023",""],["SIERRA PINEDA S.A.S","890705018","17/07/2025","17/07/2026",""],["GRUPO MOVA S.A.S.","901103766","1/10/2025","1/10/2026",""],["REVLOG SAS","900609757","16/08/2024","16/08/2025",""],["CASAS SANTOFIMIO ABOGADOS S A S","900935625","2/09/2025","2/09/2026",""],["CENTRAL PECUARIA S.A","890702335","17/09/2025","17/09/2026",""],["SERVI INDUSTRIA S.A.","800196792","31/01/2022","31/01/2023","YA ENVIE CORREO"],["SUPERMIO S.A.S","900618398","2/09/2025","2/09/2026",""],["CARNES LA VELEÑITA SAS","900577619","21/08/2025","21/08/2026",""],["CARNES FINAS EL MUELLE SAS","901307773","31/10/2025","31/10/2026",""],["ORIENTE B.C S.A.S.","900798356","16/09/2025","16/09/2026",""],["A&M ACCESORIOS COLOMBIA S.A.S.","830134202","1/09/2025","1/09/2026",""],["DISTRILEVAS S.A.S","900042972","30/09/2025","30/09/2026",""],["WILLIAM BARCO CASTAÑO","9738907","20/11/2024","20/11/2025",""],["MARIA ALEJANDRA MONSALVE TASCON","1094945475","27/03/2025","27/03/2026","CAMBIO RAZON SOCIAL"],["SOCIEDAD DE SERVICIOS INTEGRADOS PETROLEROS S.A.S","800256735","14/08/2025","14/08/2026",""],["DISTRIBUCIONES MOLIPAN S.A.","900112143","25/08/2025","25/08/2026",""],["ECG ELECTRONICS COMERCIALIZADORA S.A.S","900011856","1/09/2025","1/09/2026",""],["PROMAPAN S.A.S.","890803418","28/10/2025","28/10/2026",""],["ALMACENES SUPERMIO SAS","900272509","20/08/2025","20/08/2026",""],["DISPROPAN SAS","891200701","25/08/2025","25/08/2026",""],["SOCIEDAD NARIÑENSE DE PLASTICOS SA","900072404","3/09/2025","3/09/2026",""],["DALY JOVANA MOLINA GUZMAN","34569623","3/10/2025","3/10/2026",""],["IMPERI D`AROMA S.A.S.","901514396","7/11/2023","6/11/2024",""],["GH IMPORTACIONES S.A.S.","900071866","3/09/2025","3/09/2026",""],["UNI - AS SAS","901095716","9/07/2025","9/07/2026",""],["GLASS & PERFUM SAS","901217792","29/09/2023","28/09/2024",""],["ESTACION DE SERVICIO LA CAROLINA","41105590","16/09/2025","16/09/2026",""],["DISTRIPERFUM S.A.S.","901325296","13/10/2023","12/10/2024",""],["Paola Andrea Valencia Marquez","24337411","10/01/2023","10/01/2024","OK"],["HILASCORD SAS","830025667","21/02/2024","20/02/2025","YA ENVIE CORREO"],["YONNY A. GIRONZA","94043515","26/09/2022","26/09/2023",""],["PESCADERIA AZUL MAR DEL LLANO SAS","901802415","24/02/2024","23/02/2025","INACTIVOS"],["S.I.C PROGRESS SAS","900674771","16/01/2024","15/01/2025","INACTIVO"],["AYM INVERSIONES INMOBILIARIAS S.A.S.","900430839","24/10/2025","24/10/2026",""],["IMPORTADORA Y DISTRIBUIDORA BEMAX S.A.S.","901307916","22/10/2025","22/10/2026",""],["INMOBILIARIA AYG S.A.S.","900613574","1/10/2025","1/10/2026",""],["GL ADMINISTRADORA S.A.S","900978587","15/10/2025","15/10/2026",""],["GRUPO ECOLED SAS","901155504","11/09/2025","11/09/2026",""],["ELECTROLED DE COLOMBIA S.A.S.","900560672","11/09/2025","11/09/2026",""],["CARNES BET-EL SAS","901353560","13/11/2025","13/11/2026",""],["RHC ASESORIAS S.A.S.","901556801","3/02/2025","3/02/2026","INACTIVOS"],["LOMAR FOOD SERVICE SAS","901380394","3/02/2025","3/02/2026","OK"],["CITE SAS","900925660","3/10/2025","3/10/2026",""],["JAM INGENIERIA SERVICIOS Y SUMINISTROS SAS","900606782","19/12/2025","19/12/2026",""],["INVERSIONES MI TIERRITA SAS","901240494","4/02/2025","4/02/2026","OK"],["ANDINA DE MATERIALES SAS","900613286","5/02/2025","5/02/2026","OK"],["ODI S.A.S","900623277","10/03/2025","10/03/2026","OK"],["CAMEDCO S.A.S.","901136565","31/10/2024","31/10/2025",""],["LICEO MADRE TERESA DE CALCUTA","900031483","15/10/2025","15/10/2026",""],["CCP TRABAJO EN ALTURA SAS","901048782","30/04/2025","30/04/2026","YA ENVIE CORREO"],["LOZANO VARGAS AURORA","40775278","25/04/2025","25/04/2026","OK"],["GLOBAL FOOD COMPANY SAS","900520632","21/04/2025","21/04/2026","OK"],["IMPORTADORA COLPLUS SAS","901294117","22/04/2025","22/04/2026","OK"],["COOPERATIVA MULTIACTIVA COOMSERTAR","809012409","31/12/2025","31/12/2026",""],["INSTITUCION EDUCATIVA LICEO TALENTOS SAS","901220263","1/09/2025","1/09/2026",""],["IMPORLUJOS C & J S.A.S.","901217223","12/05/2025","12/05/2026","OK"],["INVERSIONES MEDICAS CO SAS","900996140","31/05/2023","30/05/2024","INACTIVO"],["MELECSO MATERIAL ELECTRICO Y SOLAR SAS","901591997","31/05/2023","30/05/2024","INACTIVO"],["ILUMINACIONES LED GOLD SAS","901443191","6/02/2025","6/02/2026","OK"],["COMERCIALIZADORA LLANO FISH SAS","901299272","17/09/2025","17/09/2026",""],["RESTAURANTE EL GRAN TOLIMA SAS","901309915","16/05/2022","16/05/2023","INACTIVO"],["PROVESYSTEM S.A.S","809004335","26/06/2025","26/06/2026",""],["CONSTRUCTORA CIVILMERC SAS ZOMAC","901446338","19/09/2025","19/09/2026",""],["INVERSIONES E IMPORTACIONES DEL ORIENTE SAS","901154899","9/07/2025","9/07/2026",""],["CONSORCIO CONSTRUCCIONES LJ.","901548518","24/06/2022","24/06/2023",""],["NUBIA ZULUAGA PEREZ","24758849","15/07/2025","15/07/2026",""],["BATTERY FACTORY SAS","901290257","1/08/2023","30/07/2024",""],["BIOLUZ SAS","901045204","5/08/2022","5/08/2023",""],["FISH MARKET PESCADOS Y MARISCOS SAS","901263777","3/12/2025","3/12/2026",""],["CENTROFRUVER DEL LLANO S.A.S","900482142","4/11/2025","4/11/2026",""],["MARIA IRMA ORTIGOZA TORRES","36375493","31/12/2025","31/12/2026",""],["GRUPO 3Y SAS","901633641","20/01/2025","20/01/2026","NO VAN A RENOVAR"],["JORGE HUMBERTO NAVARRETE GIL","9433625","16/09/2025","16/09/2026",""],["MOTO MARKET COMPANY S.A.S","901595164","23/07/2025","23/07/2026",""],["GRUPO FAMILIAR CLEVES ZOMAC S.A.S","901369893","13/09/2024","13/09/2025",""],["PULIDOS Y BISELADOS S.A.S","901218777","16/09/2022","16/09/2023",""],["ALUVIARK ALUMINIO Y VIDRIO ARQUITECTONICO SAS","901582829","10/10/2025","10/10/2026",""],["GUSTAVO ADOLFO THOLA ORTIGOZA","1081404976","25/11/2025","25/11/2026",""],["DISTRIBUCIONES ALDANA Y CIA S. EN C.","891100827","14/09/2024","14/09/2025",""],["ENRIQUE SILVA RIVERA","12117352","21/09/2023","19/09/2024",""],["FERRETERIA Y CACHARRERIA SALAMANCA SAS","901038353","24/06/2025","24/06/2026",""],["PEDRO MARIA GONZALEZ GUTIERREZ","17665465","16/09/2025","16/09/2026",""],["EDUARD ALBERTO GONZALEZ LOPEZ","14395292","16/09/2025","16/09/2026",""],["LJ SERVICIOS DE INGENIERIA S.A.S ZOMAC","901512811","3/11/2022","3/11/2023",""],["MANTENIMIENTO QUIMICO INDUSTRIAL S.A.S","800142118","3/10/2025","3/10/2026",""],["MARGARITA LOPEZ DE GONZALEZ","26616856","16/09/2025","16/09/2026",""],["ESTACION DE SERVICIO EL CUNDUY LTDA","830504931","16/09/2025","16/09/2026",""],["ZUGA IMPOR SAS","901529025","20/01/2025","20/01/2026","OK"],["DISTRIBUCIONES LA CATORCE C&R ZOMAC SAS","901579757","16/09/2025","16/09/2026",""],["CAMILO ALZATE RUBIANO","17637345","16/09/2025","16/09/2026",""],["Led Gold SAS","900995912","6/02/2025","6/02/2026","OK"],["ROSERO GALINDEZ NIDYA","27423532","26/12/2025","26/12/2026",""],["COMERCIALIZADORA MOTO POWER S.A.S","901636858","1/10/2025","1/10/2026",""],["AQ ADMINISTRADORA S.A.S","900978752","22/10/2025","22/10/2026",""],["NESTOR OSWALDO PINEDA MORENO","80170950","27/04/2023","26/04/2024","INACTIVO"],["SATELITE SEGURIDAD INDUSTRIAL S.A.S","800194630","11/12/2025","11/12/2026",""],["DIOS ES BENDICION INVERSIONES GANADERAS CR SAS","901788229","23/01/2025","23/01/2026","OK"],["ROOTT + CO S.A.S.","809007132","23/12/2025","23/12/2026",""],["INVERSIONES AGRO SERVING S.A.S","901038432","23/01/2025","23/01/2026","OK"],["ELECTRI LED SAS","901548147","25/01/2025","25/01/2026","YA ENVIE CORREO"],["Gladis Blandon Castaño","30302790","17/12/2025","17/12/2026",""],["INCOSMETIC GLASS S.A.","901318269","23/12/2025","23/12/2026",""],["ALIMENTOS MASIVOS DEL SUR S.A.S. ZOMAC","901418995","25/01/2025","25/01/2026","INACTIVO"],["TU HUERTA MINIMARKET","1118546292","30/05/2025","30/05/2026","INACTIVO"],["ALIANZA INMOBILIARIA GOLD SAS","901907663","6/02/2025","6/02/2026","OK"],["ALMACEN EL EMPERADOR CAQUETA","30505370","13/03/2025","13/03/2026","OK"],["LA SULTANA DEL SUR DISTRIBUCIONES S.A.S","900466211","16/09/2025","16/09/2026",""],["QUINTERO VILLAREAL GUSTAVO ALBERTO","13499552","16/04/2025","16/04/2026","OK"],["LUZ ADRIANA SIERRA LUGO","36307424","21/03/2023","20/03/2024","INACTIVA"],["COMERCIALZADORA X PARTS S.A.S.","901651897","25/11/2025","25/11/2026",""],["INDUSTRIA CAFETERA DE NARIÑO SAS","891200300","27/03/2025","27/03/2026","OK"],["JULIO CESAR JIMENEZ HERNANDEZ","75157533","17/03/2023","16/03/2024","INACTIVA"],["CARLOS ANDRES QUICENO MESA","18615621","18/04/2023","17/04/2024","INACTIVO"],["JAVIER AUGUSTO QUINTERO OCAMPO","78761945","22/10/2025","22/10/2026",""],["Emplast C&P","1112626525","30/05/2024","30/05/2025","INACTIVO"],["CLUB SOCIAL Y DEPORTIVO 31 DE MARZO","846000092","19/03/2025","19/03/2026","YA PAGARON"],["SURTIDOR LIMITADA","828000810","12/09/2025","12/09/2026",""],["INSUMOS SENTUA SAS","901682810","4/04/2025","4/04/2026","OK"],["ECL SOMOS ENERGIA SAS ESP","901543702","1/06/2023","31/05/2024","YA ENVIE CORREO"],["INVERSIONES HERMANOS PB S.A.S.","900923136","20/06/2023","19/06/2024",""],["PJTRESM S.A.S","901245817","4/06/2025","4/06/2026","YA PAGARON"],["MARIA MERCEDES GOMEZ GOMEZ","41892604","14/04/2025","14/04/2026","OK"],["ARISTIZABAL URREA JUAN BELARMINO","7542205","14/04/2025","14/04/2026","OK"],["THE SQUAD S.A.S.","900625060","27/06/2025","27/06/2026",""],["GRUPO SHATHOL SAS","901706217","27/06/2025","27/06/2026",""],["ARINCO JS SAS","901572040","4/07/2025","4/07/2026",""],["COLOMBIABIKE SAS","901690009","1/08/2025","1/08/2026",""],["GILBERTO SAFFON & ASOCIADOS S.A.S.","900420788","9/07/2025","9/07/2026",""],["MAXIMO AHORRO LA 40","1095458153","10/02/2025","10/02/2026","OK"],["TIENDAS JUANK PRADERA SAS","901168930","9/07/2025","9/07/2026",""],["DISTRIBUCIONES TRIPLE AAA DEL SUR SAS","900831517","19/12/2024","19/12/2025",""],["EVER CLEAN S.A.S.","900311488","8/07/2025","8/07/2026",""],["ACCESORIOS FS SAS","901355058","22/08/2025","22/08/2026",""],["ICO BPO COLOMBIA SAS","901639065","13/06/2023","12/06/2024","YA ENVIE CORREO"],["COMERCIALIZADORA R&P ZOMAC","901283068","30/09/2025","30/09/2026",""],["EDIFICIO CENTRO COMERCIAL GLOBAL 13","901747470","5/11/2023","4/11/2024",""],["PROYECTO AGRO VIDA SAS","901762135","4/11/2025","4/11/2026",""],["DISTRIBUCIONES ZUBIETA","890706489","17/12/2025","17/12/2026",""],["ZAPATA ALVAREZ BRAHYAN CAMILO","1094973740","25/01/2025","25/01/2026","OK"],["SUPERMERCADO DTODOS CARTAGENA","1117837279","27/01/2025","27/01/2026","YA ENVIE CORREO"],["EL PALACIO DEL PAÑAL SAS","901250774","28/01/2025","28/01/2026","FALTA HABILITAR"],["COMERCIALIZADORA SMART LED SAS","901553262","11/02/2025","11/02/2026","OK"],["ANALITIKS S.A.S.","901742934","20/09/2023","19/09/2024",""],["ARIEL VILLAMIL RIOS","1120558295","3/04/2025","3/04/2026","OK"],["DRG EXCLUSIVE ACCESORIES S.A.S.","901795865","10/03/2025","10/03/2026","OK"],["QUESERA QUINDIANA S.A.S","901783496","27/03/2025","27/03/2026","OK"],["TECNICOS A SU SERVICIO Y MONTAJES ELECTRICOS S.A.S","900273469","14/02/2025","14/02/2026","OK"],["REFRESCOR SAS","901796231","23/04/2024","23/04/2025","NO VAN A RENOVAR"],["COMERCIAL PICAFLOR SAS","900797169","29/05/2025","29/05/2026","OK"],["ALMACEN SAN ANTONIO DEL CAQUETA S.A.S.","900283304","29/05/2025","29/05/2026","OK"],["INVERSIONES RED GG SAS","901271958","9/06/2025","9/06/2026","YA ENVIE CORREO"],["SUPERMIO EXPRESS SAS","900781930","13/06/2025","13/06/2026","YA ENVIE CORREO"],["COMMUNAL INVESTMENTS SAS","901312259","20/06/2025","20/06/2026",""],["INVERSIONES GOBLA 1 SAS","901767801","9/06/2025","9/06/2026","YA ENVIE CORREO"],["INVERSIONES GOBLA DOS SAS","901766468","9/06/2025","9/06/2026","YA ENVIE CORREO"],["LEON GARCIA LUIS EDUARDO","1005293872","6/06/2024","6/06/2025","YA ENVIE CORREO"],["MERCADOGAR SAS","900495748","11/06/2025","11/06/2026","YA PAGARON"],["SUPERTIENDAS EL REY SAS","901796086","4/06/2025","4/06/2026","OK"],["TIENDAS EL REY S.A.S","900309499","12/06/2025","12/06/2026","YA PAGARON"],["PANADERIA Y REPOSTERIA LA CASCADA","900696747","25/06/2024","25/06/2025",""],["BATTERY FACTORY COLOMBIA SAS","901835622","16/06/2025","16/06/2026","YA ENVIE CORREO"],["DISTRIBUCIONES SG S.A.S","901814867","18/06/2025","18/06/2026","YA ENVIE CORREO"],["MANITOBA S.A.S","800024095","13/06/2025","13/06/2026","YA ENVIE CORREO"],["INTEGRATIVA AGROPECUARIA S.A.S","901071157","8/07/2024","8/07/2025",""],["ALMACENES PARAISO S.A BIC","826000361","8/07/2025","8/07/2026",""],["Ariza Veloza Sindy Paola","1020774034","22/07/2025","22/07/2026",""],["Gonzalez Suarez Aisnardo","80088757","6/08/2025","6/08/2026",""],["CASTRO CELY XIMENA","52425087","10/07/2024","10/07/2025",""],["INVERSIONES GRUPO ROAL SAS","901412568","11/07/2025","11/07/2026",""],["ORGANIZACION SELECTO S.A.S","830072536","9/07/2025","9/07/2026",""],["INVERSIONES 1YA SAS","901226698","11/07/2025","11/07/2026",""],["INVERSIONES LIMAR FC SAS","901182989","15/07/2025","15/07/2026",""],["JENAGRO 104 SAS","901544054","23/07/2025","23/07/2026",""],["COMERCIALIZADORA LIRIFERCH S.A.S.","900142522","4/07/2025","4/07/2026",""],["SUPERMERCADO AMIGO C V SAS","900043800","23/10/2025","23/10/2026",""],["NDUSTRIA ALIMENTARIA LA CASCADA S.A.S","900687260","25/07/2024","25/07/2025",""],["MELIACEROS SAS","900444876","3/09/2025","3/09/2026",""],["Daniel Valencia Morales","1116914339","11/08/2025","11/08/2026",""],["DISTRIJUNTOS L&S","32135620","21/08/2025","21/08/2026",""],["INVERSIONES BELLA SUIZA SAS","901690763","6/08/2025","6/08/2026",""],["INVERSIONES MERCAHOGAR DFT SAS","901287840","28/08/2025","28/08/2026",""],["OP CONSULTORIAS Y POLIGRAFIAS SAS","901028168","28/08/2025","28/08/2026",""],["GIRALDO BETANCUR ASOCIADOS SAS","900361487","21/11/2025","21/11/2026",""],["RETAZOS Y ALGO MAS","1006501242","11/09/2024","11/09/2025",""],["DISTRIBUCIONES GRUPO GREEN SAS","901407046","6/09/2024","6/09/2025",""],["CANAAN INVERSIONES S. A. S.","900064926","11/09/2025","11/09/2026",""],["BUSINESS I.T SOLUTIONS KJDC SAS","901846725","26/09/2025","26/09/2026",""],["GILBERTO SAFFON ARANGO","10230345","16/09/2025","16/09/2026",""],["john gamboa gutierrez","1075240043","16/09/2025","16/09/2026",""],["julieth lorena usme ardila","1075224092","15/10/2025","15/10/2026",""],["AC ALTURAS Y CONFIANDOS SAS","901755466","1/09/2025","1/09/2026",""],["aida dallana herrera beltran","1151453219","27/09/2024","27/09/2025",""],["PETROLIZADO JEANS S.A.S","830051046","3/10/2025","3/10/2026",""],["UNICO INSUMOS BISUTERIA","901874303","1/10/2025","1/10/2026",""],["abelardo castillo gil","7177042","11/11/2025","11/11/2026",""],["COMERCIALIZADORA DIORUM ACCESORIOS S.A.S","901883689","29/10/2025","29/10/2026",""],["DISTRIBUIDORA BARRANQUILLITA SAS ZESE","901215644","13/11/2025","13/11/2026",""],["INVERSIONES AHORRAMAX A&G SAS","901886395","5/11/2025","5/11/2026",""],["AMADOR CARDENAS GILBERTO","1033688987","18/11/2024","18/11/2025",""],["AMADOR CARDENAS YULIETH CAROLINA","1030678371","20/11/2024","20/11/2025",""],["CASTRO CARDENAS DIEGO ALEJANDRO","1020830109","30/12/2024","30/12/2025",""],["Rapiventas","800045641","30/12/2024","30/12/2025",""],["IMPORTADORA Y DISTRIBUIDORA BISUMODA S.A.S","900799021","5/01/2026","5/01/2027","OK"],["AGROVAR S A S","809012806","5/01/2026","5/01/2027","OK"],["DISTRIBUCIONES AGRICOLAS Y VETERINARIAS DEL TOLIMA SAS","901647725","7/01/2026","7/01/2027","OK"],["COMERCIALIZADORA MOTO X SAS","901237943","17/02/2025","17/02/2026","OK"],["F.A.N DISTRIBUCIONES S.A.S","901432832","8/01/2026","8/01/2027","OK"],["DISTRIBUIDORA DE LA 40 SAS","901247959","20/02/2025","20/02/2026","NO CONTESTARON"],["Supermercados Eco SAS","830508860","21/02/2025","21/02/2026","OK"],["OBRAS Y ENERGIA SAS","901488681","25/02/2025","25/02/2026","OK"],["GRUPO ARROW SAS","901437763","25/02/2025","25/02/2026","OK"],["SERVI INDUSTRIA SAS","800196792","26/02/2025","26/02/2026","OK"],["GRAN FRUVAR DE CHIA SAS","900540260","4/03/2025","4/03/2026","OK"],["INVERSIONES AYLO SAS","901547264","11/03/2025","11/03/2026","NO VAN A RENOVAR"],["MEDIOS Y PROGRAMAS S A S","900428464","12/03/2025","12/03/2026","YA ENVIE CORREO"],["COMGUSTO S.A.S.","901807142","7/03/2025","7/03/2026","OK"],["EMMLED SAS","901433409","31/03/2025","31/03/2026","OK"],["ARPUN DISTRIBUCIONES SAS","901936654","21/04/2025","21/04/2026","OK"],["Obando Sarmiento Leonardo","1075318982","25/04/2025","25/04/2026","OK"],["GILDARDO ABAD AGUDELO LOPEZ","7497102","10/12/2025","10/12/2026",""],["MAJESTIC STEEL S.A.S.","901261936","27/02/2025","27/02/2026","ARBEY"],["MP ESTRATEGIAS DE LAS TICS SAS","901862914","9/06/2025","9/06/2026","YA ENVIE CORREO"],["JUAN CARLOS AVILA BAQUERO","86058439","30/05/2025","30/05/2026","OK"],["A&M HOLDING SAS","901945613","7/07/2025","7/07/2026",""],["Karrefrut","9396805","4/07/2025","4/07/2026",""],["Disbac SAS","891800990","11/07/2025","11/07/2026",""],["LUX CASE COLOMBIA SAS","901547280","23/07/2025","23/07/2026",""],["PROGRESSOLATIN GROUP SAS","900880368","24/07/2025","24/07/2026",""],["ALICOS G&P SAS","901161765","31/07/2025","31/07/2026",""],["CUBIDES VERONICA","51984794","11/07/2025","11/07/2026",""],["BRANDON STIVEN ALZATE LOZANO","1018482297","11/09/2025","11/09/2026",""],["INDUSTRIA DE ALIMENTOS ALMAZARA","901958270","22/09/2025","22/09/2026",""],["SIMBIA SAS","901963907","17/09/2025","17/09/2026",""],["GUILLEN JAIR RAMIREZ TABARES","16112410","11/09/2025","11/09/2026",""],["PALMETTO INN S.A.S.","900715774","9/09/2025","9/09/2026",""],["ENERGY MSI S.A.S.","901408426","9/01/2026","9/01/2027","OK"],["Rapiventas s.a.s","901985911","16/09/2025","16/09/2026",""],["BELTRAN GROUP INVESTMENT SAS","901558577","1/10/2025","1/10/2026",""],["INVERSIONES NEW ORLEANS INTERNATIONAL S.A.S","900559782","30/09/2025","30/09/2026",""],["MODULAR HOMES COLOMBIA SAS","901808937","8/10/2025","8/10/2026",""],["NIÑO CUEVAS FABIAN ANDREY","1033733501","9/10/2025","9/10/2026",""],["COMERCIALIZADORA MOTOX PARTS SAS","901999609","29/10/2025","29/10/2026",""],["FANTAS LED SAS","901361615","27/02/2025","27/02/2026","OK"],["AGROVETERINARIA MUNDO GANADERO SAS","900582377","20/10/2025","20/10/2026",""]];
-DATOS=RAW.map(r=>{const desdeD=parseFecha(r[2]),hastaD=parseFecha(r[3]),d=calcDias(hastaD);return{empresa:r[0],nit:r[1],desdeD,hastaD,obs:r[4],dias:d,est:estado(d)};});
+DATOS=RAW.map(r=>{
+  const desdeD=parseFecha(r[2]),hastaD=parseFecha(r[3]),d=calcDias(hastaD);
+  const obsVal=r[4]||'';
+  return{empresa:r[0],nit:r[1],desdeD,hastaD,obs:obsVal,gestion:obsAGestion(obsVal),dias:d,est:estado(d)};
+});
 document.getElementById('uploadInfo').innerHTML=`<strong>Datos precargados</strong> · <span style="color:var(--green)">252 clientes</span> · Carga tu CSV para actualizar`;
 renderTabla();
 })();
